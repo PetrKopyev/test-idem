@@ -1,0 +1,16 @@
+extends pug/base
+
+prepend vars
+	title IDEM test
+
+append vars
+	//-
+
+block content
+	include pug/blocks/header
+	main.main
+		include pug/blocks/genius
+		include pug/blocks/employees
+		include pug/blocks/upgrade
+		include pug/blocks/lasts
+	include pug/blocks/footer

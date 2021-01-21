@@ -1,0 +1,89 @@
+.geniuses {
+	margin-bottom: 10px;
+
+	@media (max-width: 480px) {
+		order: 2;
+
+	}
+}
+
+.genius {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: "text sub""text moreno";
+
+	&__desc {
+		background-color: $color-gray-chateau;
+		color: $color-white;
+		position: relative;
+	}
+
+	&-text {
+		grid-area: text;
+		font-size: 18.1121px;
+		line-height: 26px;
+		width: 100%;
+		overflow: auto;
+		position: relative;
+
+		&::before {
+			content: "";
+			padding-top: 100%;
+			float: left;
+		}
+
+		p {
+			position: absolute;
+			padding: 30px 45px 10px 25px;
+			margin: 0 auto;
+			text-align: center;
+			// max-height: 295px;
+
+			@media (max-width: 480px) {
+				// overflow-y: scroll;
+				padding: 20px 20px 0 10px;
+			}
+		}
+
+	}
+
+	&-sub {
+		@include blocks-flex-end;
+		grid-area: sub;
+		width: 100%;
+		margin: auto;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			padding-top: 100%;
+			float: left;
+		}
+
+		& span {
+			@include bottom-text;
+		}
+	}
+
+	&-moreno {
+		@include blocks-flex-end;
+		grid-area: moreno;
+		width: 100%;
+		margin: auto;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			padding-top: 100%;
+			float: left;
+		}
+
+		& span {
+			@include bottom-text;
+		}
+	}
+
+
+}

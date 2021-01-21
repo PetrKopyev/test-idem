@@ -1,0 +1,87 @@
+.lasts {
+	margin-bottom: 10px;
+
+	@media (max-width: 480px) {
+		order: 3;
+
+	}
+}
+
+.last {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "block1 block2 block2""block3 block4 block5";
+
+	@media (max-width: 480px) {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "block2 block2""block4 block5""block1 block3";
+	}
+
+	&__desc {
+		position: relative;
+	}
+
+	&-block1 {
+		grid-area: block1;
+		height: 155px;
+		background-color: $color-hit-pink;
+		@include blocks-flex-end;
+
+		& span {
+			@include bottom-text;
+		}
+	}
+
+	&-block2 {
+		grid-area: block2;
+		height: 155px;
+		background-color: $color-hit-pink;
+		@include blocks-flex-end;
+
+		& span {
+			@include bottom-text;
+		}
+	}
+
+	&-block3 {
+		grid-area: block3;
+		height: 155px;
+		background-color: $color-carnation;
+		@include blocks-flex-end;
+
+		& span {
+			@include bottom-text;
+
+			@media (max-width: 480px) {
+				padding-right: 15px;
+
+			}
+		}
+	}
+
+	&-block4 {
+		grid-area: block4;
+		height: 155px;
+		@include blocks-flex-end;
+		background-color: $color-hit-pink;
+
+		& span {
+			@include bottom-text;
+		}
+	}
+
+	&-block5 {
+		grid-area: block5;
+		height: 155px;
+		@include blocks-flex-end;
+		background-color: $color-lavender-gray;
+
+
+		& span {
+			@include bottom-text;
+		}
+	}
+}
