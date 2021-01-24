@@ -1,7 +1,7 @@
 .upgrades {
 	margin-bottom: 10px;
 
-	@media (max-width: 480px) {
+	@include mobile {
 		display: none;
 		;
 
@@ -164,18 +164,6 @@
 				white-space: nowrap;
 				background-color: $color-kidnapper;
 			}
-
-
-
-
 		}
 	}
-
-
-
-
-
-
-
-
 }

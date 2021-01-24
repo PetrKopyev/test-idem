@@ -1,7 +1,7 @@
 .geniuses {
 	margin-bottom: 10px;
 
-	@media (max-width: 480px) {
+	@include mobile {
 		order: 2;
 
 	}
@@ -39,10 +39,8 @@
 			padding: 30px 45px 10px 25px;
 			margin: 0 auto;
 			text-align: center;
-			// max-height: 295px;
 
-			@media (max-width: 480px) {
-				// overflow-y: scroll;
+			@include mobile {
 				padding: 20px 20px 0 10px;
 			}
 		}

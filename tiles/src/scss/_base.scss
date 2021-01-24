@@ -35,7 +35,7 @@ a[role="button"]:not([disabled]) {
 
 .wrapper {
 
-	@media (min-width: 481px) {
+	@include desktop {
 		max-width: 768px;
 		margin: 0 auto;
 		padding: 0 12px 0 13px;
@@ -45,7 +45,7 @@ a[role="button"]:not([disabled]) {
 
 .main {
 
-	@media (max-width: 480px) {
+	@include mobile {
 		display: flex;
 		flex-direction: column;
 

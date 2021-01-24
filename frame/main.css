@@ -20,16 +20,13 @@ hr {
 }
 
 .frame {
-    width: 651px;
-    height: 757px;
-    background: url(./image/bg.png) no-repeat center;
+    background: url(./image/bg.jpg) no-repeat center;
     background-size: cover;
     margin: 0 auto;
-    margin-top: 45px;
 }
 
 .chat {
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
@@ -132,13 +129,11 @@ hr {
 }
 
 .input__text {
-    width: 590px;
     height: 129px;
     background: #FFFFFF;
     border: 1px solid #DBDBDB;
     border-radius: 4px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 20px 40px 0 20px;
     font-family: Noto Sans;
 }
 
